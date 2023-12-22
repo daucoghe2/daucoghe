@@ -122,7 +122,7 @@ function Update:Window(text,logo,keybind)
 	Hub.Position = UDim2.new(0, 086, 0, 0)
 	Hub.Size = UDim2.new(0, 81, 0, 27)
 	Hub.Font = Enum.Font.GothamSemibold
-	Hub.Text = "        Premium"
+	Hub.Text = "       Premium"
 	Hub.TextColor3 = Color3.fromRGB(255, 20, 0)
 	Hub.TextSize = 17.000
 	Hub.TextXAlignment = Enum.TextXAlignment.Left
@@ -1679,7 +1679,7 @@ task.spawn(function()
     game:GetService("RunService").Stepped:Connect(function()
         pcall(function()
             --[World 1]
-            if _G.Settings.Main["Auto Farm Level"] or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
+            if _G.Settings.Main["Auto Farm Level"] or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
                 _G.Settings.Main["Auto Saber"] or _G.Settings.Main["Auto Pople"] or _G.Settings.Main["Chest8"] or _G.Settings.Boss["Auto Farm Boss"] or _G.Settings.Boss["Auto All Boss"] or _G.Settings.Boss["Auto All Boss"] or
                 --[World 2]
                 _G.Settings.Main["Auto Third Sea"] or _G.Settings.Main["Auto Bartilo Quest"] or _G.Settings.Main["Auto Dark Coat"] or _G.Settings.Main["Auto Swan Glasses"] or
@@ -1742,7 +1742,7 @@ end)
 spawn(function()
     while wait(.1) do
         pcall(function()
-            if _G.Settings.Main["Auto Farm Level"] or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
+            if _G.Settings.Main["Auto Farm Level"] or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
                 _G.Settings.Main["Auto Saber"] or _G.Settings.Main["Auto Pople"] or _G.Settings.Main["Chest8"] or _G.Settings.Boss["Auto Farm Boss"] or _G.Settings.Boss["Auto All Boss"] or _G.Settings.Boss["Auto All Boss"] or
                 --[World 2]
                 _G.Settings.Main["Auto Third Sea"] or _G.Settings.Main["Auto Bartilo Quest"] or _G.Settings.Main["Auto Dark Coat"] or _G.Settings.Main["Auto Swan Glasses"] or
@@ -1795,7 +1795,7 @@ end)
 
 spawn(function()
     game:GetService("RunService").Stepped:Connect(function()
-        if _G.Settings.Main["Auto Farm Level"] or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
+        if _G.Settings.Main["Auto Farm Level"] or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
             _G.Settings.Main["Auto Saber"] or _G.Settings.Main["Auto Pople"] or _G.Settings.Main["Chest8"] or _G.Settings.Boss["Auto Farm Boss"] or _G.Settings.Boss["Auto All Boss"] or _G.Settings.Boss["Auto All Boss"] or
             --[World 2]
             _G.Settings.Main["Auto Third Sea"] or _G.Settings.Main["Auto Bartilo Quest"] or _G.Settings.Main["Auto Dark Coat"] or _G.Settings.Main["Auto Swan Glasses"] or
@@ -1838,7 +1838,7 @@ end
 spawn(function()
     while task.wait() do
         pcall(function()
-            if _G.Settings.Main["Auto Farm Level"] or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
+            if _G.Settings.Main["Auto Farm Level"] or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
                 _G.Settings.Main["Auto Saber"] or _G.Settings.Main["Auto Pople"] or _G.Settings.Main["Chest8"] or _G.Settings.Boss["Auto Farm Boss"] or _G.Settings.Boss["Auto All Boss"] or _G.Settings.Boss["Auto All Boss"] or
                 --[World 2]
                 _G.Settings.Main["Auto Third Sea"] or _G.Settings.Main["Auto Bartilo Quest"] or _G.Settings.Main["Auto Dark Coat"] or _G.Settings.Main["Auto Swan Glasses"] or
@@ -1878,7 +1878,7 @@ end)
 
 spawn(function() ------body velocity
     game:GetService("RunService").Stepped:Connect(function()
-        if _G.Settings.Main["Auto Farm Level"] or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
+        if _G.Settings.Main["Auto Farm Level"] or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
             _G.Settings.Main["Auto Saber"] or _G.Settings.Main["Auto Pople"] or _G.Settings.Main["Chest8"] or _G.Settings.Boss["Auto Farm Boss"] or _G.Settings.Boss["Auto All Boss"] or _G.Settings.Boss["Auto All Boss"] or
             --[World 2]
             _G.Settings.Main["Auto Third Sea"] or _G.Settings.Main["Auto Bartilo Quest"] or _G.Settings.Main["Auto Dark Coat"] or _G.Settings.Main["Auto Swan Glasses"] or
@@ -6476,7 +6476,7 @@ end)
 
 Main:Seperator("Elite Hunter")
 
-local Elite_Hunter_Status = Main:Label("Status : N/Q")
+local Elite_Hunter_Status = Main:Label("Elite Hunter : N/Q")
     spawn(function()
         while wait() do
             pcall(function()
@@ -6653,6 +6653,183 @@ local Elite_Hunter_Status = Main:Label("Status : N/Q")
             end
         end)
     end)
+
+Main:Seperator("Auto Sea Event")
+
+Main:Toggle("Kill Terrorshark",false,function(v)
+    _G.Terror = v
+end)
+spawn(function()
+    while wait() do
+        if _G.Terror and World3 then
+            pcall(function()
+                if game:GetService("Workspace").Enemies:FindFirstChild("Terrorshark") then
+                    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+                        if v.Name == "Terrorshark" then
+                            if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+                                repeat task.wait()
+                                    if _G.Settings.Configs["Auto Haki"] then
+                                        if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
+                                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                "Buso")
+                                        end
+                                    end
+                                    FastAttack = true
+                                    EquipWeapon(_G.Settings.Configs["Select Weapon"])
+                                    v.HumanoidRootPart.CanCollide = false
+                                    v.Humanoid.WalkSpeed = 0
+                                    PosNarathiwat = v.HumanoidRootPart.CFrame
+                                    v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+                                    toTarget(v.HumanoidRootPart.CFrame * CFrame.new(0, _G.Settings.Configs["Distance Auto Farm"], 0))
+                                    game:GetService("VirtualUser"):CaptureController()
+                                    game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
+                                until not _G.Terror or not v.Parent or v.Humanoid.Health <= 0
+                                FastAttack = false
+                            end
+                        end
+                    end
+                else
+                    if game:GetService("ReplicatedStorage"):FindFirstChild("Terrorshark") then
+                        toTarget(game:GetService("ReplicatedStorage"):FindFirstChild("Terrorshark").HumanoidRootPart.CFrame * CFrame.new(2,20,2))
+                    else
+                    end
+                end
+            end)
+        end
+    end
+end)
+
+
+Main:Toggle("Kill Piranha",false,function(v)
+    _G.Pira = v
+end)
+spawn(function()
+    while wait() do
+        if _G.Pira and World3 then
+            pcall(function()
+                if game:GetService("Workspace").Enemies:FindFirstChild("Piranha") then
+                    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+                        if v.Name == "Piranha" then
+                            if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+                                repeat task.wait()
+                                    if _G.Settings.Configs["Auto Haki"] then
+                                        if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
+                                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                "Buso")
+                                        end
+                                    end
+                                    EquipWeapon(_G.Settings.Configs["Select Weapon"])
+                                    v.HumanoidRootPart.CanCollide = false
+                                    v.Humanoid.WalkSpeed = 0
+                                    PosNarathiwat = v.HumanoidRootPart.CFrame
+                                    v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+                                    toTarget(v.HumanoidRootPart.CFrame * CFrame.new(0, _G.Settings.Configs["Distance Auto Farm"], 0))
+                                    game:GetService("VirtualUser"):CaptureController()
+                                    game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
+                                until not _G.Pira or not v.Parent or v.Humanoid.Health <= 0
+                            end
+                        end
+                    end
+                else
+                    if game:GetService("ReplicatedStorage"):FindFirstChild("Piranha") then
+                        toTarget(game:GetService("ReplicatedStorage"):FindFirstChild("Piranha").HumanoidRootPart.CFrame * CFrame.new(2,20,2))
+                    else
+                    
+                    end
+                end
+            end)
+        end
+    end
+end)
+
+
+Main:Toggle("Kill Fish Crew",false,function(v)
+    _G.Fish = v
+end)
+spawn(function()
+    while wait() do
+        if _G.Fish and World3 then
+            pcall(function()
+                if game:GetService("Workspace").Enemies:FindFirstChild("Fish Crew Member") then
+                    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+                        if v.Name == "Fish Crew Member" then
+                            if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+                                repeat task.wait()
+                                    if _G.Settings.Configs["Auto Haki"] then
+                                        if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
+                                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                "Buso")
+                                        end
+                                    end
+                                    EquipWeapon(_G.Settings.Configs["Select Weapon"])
+                                    v.HumanoidRootPart.CanCollide = false
+                                    v.Humanoid.WalkSpeed = 0
+                                    PosNarathiwat = v.HumanoidRootPart.CFrame
+                                    v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+                                    toTarget(v.HumanoidRootPart.CFrame * CFrame.new(0, _G.Settings.Configs["Distance Auto Farm"], 0))
+                                    game:GetService("VirtualUser"):CaptureController()
+                                    game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
+                                until not _G.Fish or not v.Parent or v.Humanoid.Health <= 0
+
+                            end
+                        end
+                    end
+                else
+                    if game:GetService("ReplicatedStorage"):FindFirstChild("Fish Crew Member") then
+                        toTarget(game:GetService("ReplicatedStorage"):FindFirstChild("Fish Crew Member").HumanoidRootPart.CFrame * CFrame.new(2,20,2))
+                    else
+                
+                    end
+                end
+            end)
+        end
+    end
+end)
+
+
+Main:Toggle("Kill Shark",false,function(v)
+    _G.Shark = v
+end)
+
+spawn(function()
+    while wait() do
+        if _G.Shark and World3 then
+            pcall(function()
+                if game:GetService("Workspace").Enemies:FindFirstChild("Shark") then
+                    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+                        if v.Name == "Shark" then
+                            if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+                                repeat task.wait()
+                                    if _G.Settings.Configs["Auto Haki"] then
+                                        if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
+                                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                "Buso")
+                                        end
+                                    end
+                                    EquipWeapon(_G.Settings.Configs["Select Weapon"])
+                                    v.HumanoidRootPart.CanCollide = false
+                                    v.Humanoid.WalkSpeed = 0
+                                    v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+                                    PosNarathiwat = v.HumanoidRootPart.CFrame
+                                    toTarget(v.HumanoidRootPart.CFrame * CFrame.new(0, _G.Settings.Configs["Distance Auto Farm"], 0))
+                                    game:GetService("VirtualUser"):CaptureController()
+                                    game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
+                                until not _G.Shark or not v.Parent or v.Humanoid.Health <= 0
+
+                            end
+                        end
+                    end
+                else
+                    if game:GetService("ReplicatedStorage"):FindFirstChild("Terrorshark") then
+                        toTarget(game:GetService("ReplicatedStorage"):FindFirstChild("Terrorshark").HumanoidRootPart.CFrame * CFrame.new(2,20,2))
+                    else
+                       
+                    end
+                end
+            end)
+        end
+    end
+end)
 
 Main:Seperator("Fighting Style")
 
@@ -11241,7 +11418,6 @@ M:Toggle("No Fog", _G.Settings.Misc["No Fog"], function(value)
         end
     end)
 end)
-
 
 
 
