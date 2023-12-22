@@ -1679,7 +1679,7 @@ task.spawn(function()
     game:GetService("RunService").Stepped:Connect(function()
         pcall(function()
             --[World 1]
-            if _G.Settings.Main["Auto Farm Level"] or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
+            if _G.Settings.Main["Auto Farm Level"] or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
                 _G.Settings.Main["Auto Saber"] or _G.Settings.Main["Auto Pople"] or _G.Settings.Main["Chest8"] or _G.Settings.Boss["Auto Farm Boss"] or _G.Settings.Boss["Auto All Boss"] or _G.Settings.Boss["Auto All Boss"] or
                 --[World 2]
                 _G.Settings.Main["Auto Third Sea"] or _G.Settings.Main["Auto Bartilo Quest"] or _G.Settings.Main["Auto Dark Coat"] or _G.Settings.Main["Auto Swan Glasses"] or
@@ -1742,7 +1742,7 @@ end)
 spawn(function()
     while wait(.1) do
         pcall(function()
-            if _G.Settings.Main["Auto Farm Level"] or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
+            if _G.Settings.Main["Auto Farm Level"] or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
                 _G.Settings.Main["Auto Saber"] or _G.Settings.Main["Auto Pople"] or _G.Settings.Main["Chest8"] or _G.Settings.Boss["Auto Farm Boss"] or _G.Settings.Boss["Auto All Boss"] or _G.Settings.Boss["Auto All Boss"] or
                 --[World 2]
                 _G.Settings.Main["Auto Third Sea"] or _G.Settings.Main["Auto Bartilo Quest"] or _G.Settings.Main["Auto Dark Coat"] or _G.Settings.Main["Auto Swan Glasses"] or
@@ -1795,7 +1795,7 @@ end)
 
 spawn(function()
     game:GetService("RunService").Stepped:Connect(function()
-        if _G.Settings.Main["Auto Farm Level"] or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
+        if _G.Settings.Main["Auto Farm Level"] or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
             _G.Settings.Main["Auto Saber"] or _G.Settings.Main["Auto Pople"] or _G.Settings.Main["Chest8"] or _G.Settings.Boss["Auto Farm Boss"] or _G.Settings.Boss["Auto All Boss"] or _G.Settings.Boss["Auto All Boss"] or
             --[World 2]
             _G.Settings.Main["Auto Third Sea"] or _G.Settings.Main["Auto Bartilo Quest"] or _G.Settings.Main["Auto Dark Coat"] or _G.Settings.Main["Auto Swan Glasses"] or
@@ -1838,7 +1838,7 @@ end
 spawn(function()
     while task.wait() do
         pcall(function()
-            if _G.Settings.Main["Auto Farm Level"] or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
+            if _G.Settings.Main["Auto Farm Level"] or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
                 _G.Settings.Main["Auto Saber"] or _G.Settings.Main["Auto Pople"] or _G.Settings.Main["Chest8"] or _G.Settings.Boss["Auto Farm Boss"] or _G.Settings.Boss["Auto All Boss"] or _G.Settings.Boss["Auto All Boss"] or
                 --[World 2]
                 _G.Settings.Main["Auto Third Sea"] or _G.Settings.Main["Auto Bartilo Quest"] or _G.Settings.Main["Auto Dark Coat"] or _G.Settings.Main["Auto Swan Glasses"] or
@@ -1878,7 +1878,7 @@ end)
 
 spawn(function() ------body velocity
     game:GetService("RunService").Stepped:Connect(function()
-        if _G.Settings.Main["Auto Farm Level"] or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
+        if _G.Settings.Main["Auto Farm Level"] or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
             _G.Settings.Main["Auto Saber"] or _G.Settings.Main["Auto Pople"] or _G.Settings.Main["Chest8"] or _G.Settings.Boss["Auto Farm Boss"] or _G.Settings.Boss["Auto All Boss"] or _G.Settings.Boss["Auto All Boss"] or
             --[World 2]
             _G.Settings.Main["Auto Third Sea"] or _G.Settings.Main["Auto Bartilo Quest"] or _G.Settings.Main["Auto Dark Coat"] or _G.Settings.Main["Auto Swan Glasses"] or
@@ -6654,7 +6654,87 @@ local Elite_Hunter_Status = Main:Label("Status : N/Q")
         end)
     end)
 
-Main:Seperator("Auto Sea Event")
+
+Main:Seperator("Event New")
+
+
+
+
+Main:Toggle("Teleport To Kitsune Island",false,function(v)
+    _G.TweenToKitsune = v
+end)
+
+
+spawn(function()
+    local kitsuneIsland
+
+    while not kitsuneIsland do
+        kitsuneIsland = game:GetService("Workspace").Map:FindFirstChild("KitsuneIsland")
+        wait(1)
+    end
+
+    while wait() do
+        if _G.TweenToKitsune then
+            local shrineActive = kitsuneIsland:FindFirstChild("ShrineActive")
+
+            if shrineActive then
+                for _, v in pairs(shrineActive:GetDescendants()) do
+                    if v:IsA("BasePart") and v.Name:find("NeonShrinePart") then
+                        toTarget(v.CFrame)
+                    end
+                end
+            end
+        end
+    end
+end)
+
+
+
+Main:Toggle("Collect Azure",false,function(v)
+    _G.CollectAzure = v
+end)
+
+if _G.CollectAzure then
+    -- Bắt đầu vòng lặp nếu chức năng được bật
+    if not lumlinhhonLoopRunning then
+        lumlinhhonLoopRunning = true
+        spawn(function()
+            while lumlinhhonLoopRunning do
+                wait()
+
+                local emberTemplate = game:GetService("Workspace").EmberTemplate
+                local player = game.Players.LocalPlayer
+                local humanoidRootPart = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+
+                if humanoidRootPart then
+                    local partFound = false
+
+                    -- Kiểm tra sự tồn tại của "Part" và nhân vật
+                    while not partFound and humanoidRootPart:IsDescendantOf(workspace) do
+                        for _, v in pairs(emberTemplate:GetDescendants()) do
+                            if v:IsA("BasePart") and v.Name == "Part" then
+                                partFound = true
+                                humanoidRootPart.CFrame = v.CFrame
+                                break
+                            end
+                        end
+
+                        wait(0.3) -- Chờ 1 giây trước khi kiểm tra lại
+                    end
+                end
+            end
+        end)
+    end
+else
+    -- Dừng vòng lặp nếu chức năng được tắt
+    lumlinhhonLoopRunning = false
+end
+
+
+
+
+
+Main:Seperator("Rough Sea")
 
 Main:Toggle("Kill Terrorshark",false,function(v)
     _G.Terror = v
@@ -11929,4 +12009,3 @@ M:Toggle("No Fog", _G.Settings.Misc["No Fog"], function(value)
         end
     end)
 end)
-
