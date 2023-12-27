@@ -6648,7 +6648,7 @@ local Elite_Hunter_Status = Main:Label("Status : N/Q")
 
 Main:Seperator("Chrismas Event")
 
-Main:Toggle("Auto Farm Candy",false,function(value)
+Main:Toggle("Auto Farm Candy 😍😍",false,function(value)
 	_G.AutoCandy = value
     if value == false then
         wait()
@@ -6790,7 +6790,6 @@ spawn(function()
         end
     end
 end)
-
 
 Main:Toggle("Collect Azure Ambers",false,function(v)
     _G.CollectAzure = v
