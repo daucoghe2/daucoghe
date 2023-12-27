@@ -1643,16 +1643,13 @@ end
 --noclip
 
 function Noclip()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, 0, 0) -- ทำให้ตัวละครลอยตัว
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, 0, 0)
     for _, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
         if v:IsA("BasePart") and v.CanCollide == true then
             v.CanCollide = false -- ทำให้วัตถุทั้งหมดในตัวละครทะลุผ่านกำแพง
         end
     end
 end
-
-Noclip()
-
 -- [Body Gyro]
 task.spawn(function()
     game:GetService("RunService").Stepped:Connect(function()
@@ -4895,7 +4892,7 @@ end
 --------------------------------------------------------------------------------------------------------------------------
     Main:Seperator("Setting")
 local weaponlist = {'Melee','Sword','Fruit'}
-Main:Dropdown("Weapon",weaponlist,function(v)
+Main:Dropdown("Select Weapon",weaponlist,function(v)
 SelectWeapon = v
 
 end)
@@ -4940,38 +4937,8 @@ task.spawn(function()
     end
 end)
 
-
-        _G.Settings.Configs["Fast Attack Type"] = 0.15
+       
  
-
-
-
-task.spawn(function() --coroutine.wrap(function()
-	while task.wait(0) do
-		local ac = CombatFrameworkR.activeController
-		if ac and ac.equipped then
-			wait(0.05)
-			if FastAttack and _G.Settings.Configs["Fast Attack"] then
-				AttackFunction()
-				if _G.Settings.Configs["Fast Attack Type"] == "Normal" then
-					if tick() - cooldownfastattack > .9 then wait(.1) cooldownfastattack = tick() end
-				elseif _G.Settings.Configs["Fast Attack Type"] == "Fast" then
-					if tick() - cooldownfastattack > 1.5 then wait(.01) cooldownfastattack = tick() end
-				elseif _G.Settings.Configs["Fast Attack Type"] == "Slow" then
-					if tick() - cooldownfastattack > .3 then wait(.7) cooldownfastattack = tick() end
-				end
-			elseif FastAttack and _G.Settings.Configs["Fast Attack"] == false then
-				if ac.hitboxMagnitude ~= 55 then
-					ac.hitboxMagnitude = 55
-				end
-				ac:attack()
-			end
-		end
-	end
-end)
-
-
-
 
 coroutine.wrap(function()
     local interval = 0.1     -- ระยะเวลารอเริ่มต้น (0.1 วินาที)/0.000000000000000001
@@ -9745,8 +9712,12 @@ end)
 --------------------------------------------------------------------------------------------------------------------------
 --Setting
 local MyLevelfastautofarm = game.Players.LocalPlayer.Data.Level.Value
-_G.Settings.Configs["Double Quest"] = true
-        _G.Settings.Configs["Fast Attack"] = true
+_G.Settings.Configs["Double Quest"] = false
+--------------------------------------------------------------------------------------------------------------------------
+--Fast Attack
+    _G.Settings.Configs["Fast Attack"] = true
+	_G.Settings.Configs["Fast Attack Type"] = 0.175
+-------------------------------------------------------------------------------------------------------------------------	
 
 
 Setting:Toggle("Bypass TP", _G.Settings.Configs["Bypass TP"], function(value)
@@ -9790,12 +9761,11 @@ Setting:Toggle("White Screen", false, function(value)
 
     Setting:Toggle("Disabled Damage", _G.Settings.Configs["Disabled Damage"], function(value)
         _G.Settings.Configs["Disabled Damage"] = value
-        
         DisabledDamage()
     end
 )
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --Raid
 Raid:Toggle("Auto Raid", _G.Settings.Raids["Auto Raids"], function(value)
     _G.Settings.Raids["Auto Raids"] = value
