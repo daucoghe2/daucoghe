@@ -1679,7 +1679,7 @@ task.spawn(function()
     game:GetService("RunService").Stepped:Connect(function()
         pcall(function()
             --[World 1]
-            if _G.Settings.Main["Auto Farm Level"] or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
+            if _G.Settings.Main["Auto Farm Level"] or _G.AutoCandy or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
                 _G.Settings.Main["Auto Saber"] or _G.Settings.Main["Auto Pople"] or _G.Settings.Main["Chest8"] or _G.Settings.Boss["Auto Farm Boss"] or _G.Settings.Boss["Auto All Boss"] or _G.Settings.Boss["Auto All Boss"] or
                 --[World 2]
                 _G.Settings.Main["Auto Third Sea"] or _G.Settings.Main["Auto Bartilo Quest"] or _G.Settings.Main["Auto Dark Coat"] or _G.Settings.Main["Auto Swan Glasses"] or
@@ -1742,7 +1742,7 @@ end)
 spawn(function()
     while wait(.1) do
         pcall(function()
-            if _G.Settings.Main["Auto Farm Level"] or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
+            if _G.Settings.Main["Auto Farm Level"] or _G.AutoCandy or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
                 _G.Settings.Main["Auto Saber"] or _G.Settings.Main["Auto Pople"] or _G.Settings.Main["Chest8"] or _G.Settings.Boss["Auto Farm Boss"] or _G.Settings.Boss["Auto All Boss"] or _G.Settings.Boss["Auto All Boss"] or
                 --[World 2]
                 _G.Settings.Main["Auto Third Sea"] or _G.Settings.Main["Auto Bartilo Quest"] or _G.Settings.Main["Auto Dark Coat"] or _G.Settings.Main["Auto Swan Glasses"] or
@@ -1795,7 +1795,7 @@ end)
 
 spawn(function()
     game:GetService("RunService").Stepped:Connect(function()
-        if _G.Settings.Main["Auto Farm Level"] or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
+        if _G.Settings.Main["Auto Farm Level"] or _G.AutoCandy or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
             _G.Settings.Main["Auto Saber"] or _G.Settings.Main["Auto Pople"] or _G.Settings.Main["Chest8"] or _G.Settings.Boss["Auto Farm Boss"] or _G.Settings.Boss["Auto All Boss"] or _G.Settings.Boss["Auto All Boss"] or
             --[World 2]
             _G.Settings.Main["Auto Third Sea"] or _G.Settings.Main["Auto Bartilo Quest"] or _G.Settings.Main["Auto Dark Coat"] or _G.Settings.Main["Auto Swan Glasses"] or
@@ -1838,7 +1838,7 @@ end
 spawn(function()
     while task.wait() do
         pcall(function()
-            if _G.Settings.Main["Auto Farm Level"] or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
+            if _G.Settings.Main["Auto Farm Level"] or _G.AutoCandy or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
                 _G.Settings.Main["Auto Saber"] or _G.Settings.Main["Auto Pople"] or _G.Settings.Main["Chest8"] or _G.Settings.Boss["Auto Farm Boss"] or _G.Settings.Boss["Auto All Boss"] or _G.Settings.Boss["Auto All Boss"] or
                 --[World 2]
                 _G.Settings.Main["Auto Third Sea"] or _G.Settings.Main["Auto Bartilo Quest"] or _G.Settings.Main["Auto Dark Coat"] or _G.Settings.Main["Auto Swan Glasses"] or
@@ -1878,7 +1878,7 @@ end)
 
 spawn(function() ------body velocity
     game:GetService("RunService").Stepped:Connect(function()
-        if _G.Settings.Main["Auto Farm Level"] or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
+        if _G.Settings.Main["Auto Farm Level"] or _G.AutoCandy or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
             _G.Settings.Main["Auto Saber"] or _G.Settings.Main["Auto Pople"] or _G.Settings.Main["Chest8"] or _G.Settings.Boss["Auto Farm Boss"] or _G.Settings.Boss["Auto All Boss"] or _G.Settings.Boss["Auto All Boss"] or
             --[World 2]
             _G.Settings.Main["Auto Third Sea"] or _G.Settings.Main["Auto Bartilo Quest"] or _G.Settings.Main["Auto Dark Coat"] or _G.Settings.Main["Auto Swan Glasses"] or
@@ -6654,16 +6654,128 @@ local Elite_Hunter_Status = Main:Label("Status : N/Q")
         end)
     end)
 
+Main:Seperator("Chrismas Event")
 
-Main:Seperator("Event New")
+Main:Toggle("Auto Farm Candy",false,function(value)
+	_G.AutoCandy = value
+    if value == false then
+        wait()
+        toTarget(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
+        wait()
+    end
+end) 
+local CandyPos = CFrame.new(-16603.197265625, 130.3873748779297, 1087.16455078125)
+spawn(function()
+		  while wait() do 
+			  if _G.AutoCandy then
+				  pcall(function()
+					toTarget(CandyPos)
+					  if game:GetService("Workspace").Enemies:FindFirstChild("Isle Outlaw") or game:GetService("Workspace").Enemies:FindFirstChild("Island Boy") or game:GetService("Workspace").Enemies:FindFirstChild("Sun-kissed Warrior") or game:GetService("Workspace").Enemies:FindFirstChild("Isle Champion") then
+						  for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+							  if v.Name == "Isle Outlaw" or v.Name == "Island Boy" or v.Name == "Sun-kissed Warrior" or v.Name == "Isle Champion" then
+								 if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+                                        wait()
+                                        StartMagnet = true
+                                        FastAttack = true
+                                        if _G.Settings.Configs["Auto Haki"] then
+                                            if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
+                                                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                                    "Buso")
+                                            end
+                                        end
+                                        if not game.Players.LocalPlayer.Character:FindFirstChild(_G.Settings.Configs["Select Weapon"]) then
+                                            wait()
+                                            EquipWeapon(_G.Settings.Configs["Select Weapon"])
+                                        end
+                                        PosMon = v.HumanoidRootPart.CFrame
+                                        if not _G.Settings.Configs["Fast Attack"] then
+                                            game:GetService 'VirtualUser':CaptureController()
+                                            game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                        end
+                                        v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+                                        if _G.Settings.Configs["Show Hitbox"] then
+                                            v.HumanoidRootPart.Transparency = _G.Hitbox_LocalTransparency
+                                        else
+                                            v.HumanoidRootPart.Transparency = 1
+                                        end
+                                        v.Humanoid.JumpPower = 0
+                                        v.Humanoid.WalkSpeed = 0
+                                        v.HumanoidRootPart.CanCollide = false
+                                        v.Humanoid:ChangeState(11)
+                                        toTarget(v.HumanoidRootPart.CFrame *
+                                            CFrame.new(0, _G.Settings.Configs["Distance Auto Farm"], 0))
+									  until not _G.AutoCandy or not v.Parent or v.Humanoid.Health <= 0
+								  end
+							  end
+						  end
+						toTarget(CFrame.new(-16599.1484375, 154.2681121826172, -166.32186889648438))
+					end
+				end)
+			  end
+		  end
+	  end)
+Main:Seperator("Kisune")
 
 
+local mr = Main:Label("")
 
+task.spawn(function()
+	while task.wait() do
+		pcall(function()
+			if game.Workspace.Map:FindFirstChild("KitsuneIsland") then
+				mr:Set("🏝 Kitsune Island :  🟢")
+			else
+				mr:Set("🏝 Kitsune Island :  🔴")
+			end
+		end)
+	end
+end)
+
+Main:Toggle("Esp Kitsune Island",false,function(v)
+	KitsuneEsp = v
+	while IslandESP do wait()
+		UpdateKitsune() 
+	end
+end) 
+function UpdateKitsune()
+	for i, v in pairs(game:GetService("Workspace").Map.KitsuneIsalnd.ShrineActive:GetChildren()) do
+		pcall(function()
+			if KitsuneEsp then
+				if v.Name ~= "NeonShrinePart" then
+					if not v:FindFirstChild('IslandESP') then
+						local bill = Instance.new('BillboardGui', v)
+						bill.Name = 'IslandESP'
+						bill.ExtentsOffset = Vector3.new(0, 1, 0)
+						bill.Size = UDim2.new(1, 200, 1, 30)
+						bill.Adornee = v
+						bill.AlwaysOnTop = true
+						local name = Instance.new('TextLabel', bill)
+						name.Font = "Code"
+						name.FontSize = "Size14"
+						name.TextWrapped = true
+						name.Size = UDim2.new(1, 0, 1, 0)
+						name.TextYAlignment = 'Top'
+						name.BackgroundTransparency = 1
+						name.TextStrokeTransparency = 0.5
+						name.TextColor3 = Color3.fromRGB(80, 245, 245)
+						name.Text = "Kitsune Island"
+					else
+						v['IslandESP'].TextLabel.Text = "Kitsune Island"
+					end
+				end
+			else
+				if v:FindFirstChild('IslandESP') then
+					v:FindFirstChild('IslandESP'):Destroy()
+				end
+			end
+		end)
+	end
+end
 
 Main:Toggle("Teleport To Kitsune Island",false,function(v)
     _G.TweenToKitsune = v
 end)
-
 
 spawn(function()
     local kitsuneIsland
@@ -6672,7 +6784,6 @@ spawn(function()
         kitsuneIsland = game:GetService("Workspace").Map:FindFirstChild("KitsuneIsland")
         wait(1)
     end
-
     while wait() do
         if _G.TweenToKitsune then
             local shrineActive = kitsuneIsland:FindFirstChild("ShrineActive")
@@ -6689,47 +6800,21 @@ spawn(function()
 end)
 
 
-
 Main:Toggle("Collect Azure",false,function(v)
     _G.CollectAzure = v
 end)
-
-if _G.CollectAzure then
-
-    if not lumlinhhonLoopRunning then
-        lumlinhhonLoopRunning = true
-        spawn(function()
-            while lumlinhhonLoopRunning do
-                wait()
-
-                local emberTemplate = game:GetService("Workspace").EmberTemplate
-                local player = game.Players.LocalPlayer
-                local humanoidRootPart = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
-
-                if humanoidRootPart then
-                    local partFound = false
-
-   
-                    while not partFound and humanoidRootPart:IsDescendantOf(workspace) do
-                        for _, v in pairs(emberTemplate:GetDescendants()) do
-                            if v:IsA("BasePart") and v.Name == "Part" then
-                                partFound = true
-                                humanoidRootPart.CFrame = v.CFrame
-                                break
-                            end
-                        end
-
-                        wait(0.3)
-                    end
+spawn(function()
+    while wait() do
+        if _G.CollectAzure then
+            pcall(function()
+                if game:GetService("Workspace"):FindFirstChild("AttachedAzureEmber") then
+                    toTarget(game:GetService("Workspace"):WaitForChild("EmberTemplate"):FindFirstChild("Part").CFrame)
+					print("Azure")
                 end
-            end
-        end)
+            end)
+        end
     end
-else
-    lumlinhhonLoopRunning = false
-end
-
-
+end)
 
 Main:Seperator("Rough Sea")
 
@@ -9690,12 +9775,9 @@ end)
 --------------------------------------------------------------------------------------------------------------------------
 --Setting
 local MyLevelfastautofarm = game.Players.LocalPlayer.Data.Level.Value
-_G.Settings.Configs["Double Quest"] = false
+_G.Settings.Configs["Double Quest"] = true
+        _G.Settings.Configs["Fast Attack"] = true
 
-Setting:Toggle("Fast Attack", _G.Settings.Configs["Fast Attack"], function(value)
-        _G.Settings.Configs["Fast Attack"] = value
-        
-    end)
 
 Setting:Toggle("Bypass TP", _G.Settings.Configs["Bypass TP"], function(value)
     _G.Settings.Configs["Bypass TP"] = value
