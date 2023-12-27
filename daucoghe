@@ -6766,22 +6766,37 @@ spawn(function()
                     for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                         if v.Name == "Terrorshark" then
                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-                                repeat task.wait()
+                                repeat
+                                    wait()
+                                    StartMagnet = true
+                                    FastAttack = true
                                     if _G.Settings.Configs["Auto Haki"] then
                                         if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
                                             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
                                                 "Buso")
                                         end
                                     end
-                                    FastAttack = true
-                                    EquipWeapon(_G.Settings.Configs["Select Weapon"])
-                                    v.HumanoidRootPart.CanCollide = false
+                                    if not game.Players.LocalPlayer.Character:FindFirstChild(_G.Settings.Configs["Select Weapon"]) then
+                                        wait()
+                                        EquipWeapon(_G.Settings.Configs["Select Weapon"])
+                                    end
+                                    PosMon = v.HumanoidRootPart.CFrame
+                                    if not _G.Settings.Configs["Fast Attack"] then
+                                        game:GetService 'VirtualUser':CaptureController()
+                                        game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                    end
+                                    v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+                                    if _G.Settings.Configs["Show Hitbox"] then
+                                        v.HumanoidRootPart.Transparency = _G.Hitbox_LocalTransparency
+                                    else
+                                        v.HumanoidRootPart.Transparency = 1
+                                    end
+                                    v.Humanoid.JumpPower = 0
                                     v.Humanoid.WalkSpeed = 0
-                                    PosNarathiwat = v.HumanoidRootPart.CFrame
-                                    v.HumanoidRootPart.Size = Vector3.new(50,50,50)
-                                    toTarget(v.HumanoidRootPart.CFrame * CFrame.new(0, _G.Settings.Configs["Distance Auto Farm"], 0))
-                                    game:GetService("VirtualUser"):CaptureController()
-                                    game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
+                                    v.HumanoidRootPart.CanCollide = false
+                                    v.Humanoid:ChangeState(11)
+                                    toTarget(v.HumanoidRootPart.CFrame *
+                                        CFrame.new(0, _G.Settings.Configs["Distance Auto Farm"], 0))
                                 until not _G.Terror or not v.Parent or v.Humanoid.Health <= 0
                                 FastAttack = false
                             end
@@ -6810,21 +6825,37 @@ spawn(function()
                     for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                         if v.Name == "Piranha" then
                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-                                repeat task.wait()
+                                repeat
+                                    wait()
+                                    StartMagnet = true
+                                    FastAttack = true
                                     if _G.Settings.Configs["Auto Haki"] then
                                         if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
                                             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
                                                 "Buso")
                                         end
                                     end
-                                    EquipWeapon(_G.Settings.Configs["Select Weapon"])
-                                    v.HumanoidRootPart.CanCollide = false
+                                    if not game.Players.LocalPlayer.Character:FindFirstChild(_G.Settings.Configs["Select Weapon"]) then
+                                        wait()
+                                        EquipWeapon(_G.Settings.Configs["Select Weapon"])
+                                    end
+                                    PosMon = v.HumanoidRootPart.CFrame
+                                    if not _G.Settings.Configs["Fast Attack"] then
+                                        game:GetService 'VirtualUser':CaptureController()
+                                        game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                    end
+                                    v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+                                    if _G.Settings.Configs["Show Hitbox"] then
+                                        v.HumanoidRootPart.Transparency = _G.Hitbox_LocalTransparency
+                                    else
+                                        v.HumanoidRootPart.Transparency = 1
+                                    end
+                                    v.Humanoid.JumpPower = 0
                                     v.Humanoid.WalkSpeed = 0
-                                    PosNarathiwat = v.HumanoidRootPart.CFrame
-                                    v.HumanoidRootPart.Size = Vector3.new(50,50,50)
-                                    toTarget(v.HumanoidRootPart.CFrame * CFrame.new(0, _G.Settings.Configs["Distance Auto Farm"], 0))
-                                    game:GetService("VirtualUser"):CaptureController()
-                                    game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
+                                    v.HumanoidRootPart.CanCollide = false
+                                    v.Humanoid:ChangeState(11)
+                                    toTarget(v.HumanoidRootPart.CFrame *
+                                        CFrame.new(0, _G.Settings.Configs["Distance Auto Farm"], 0))
                                 until not _G.Pira or not v.Parent or v.Humanoid.Health <= 0
                             end
                         end
@@ -6853,21 +6884,37 @@ spawn(function()
                     for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                         if v.Name == "Fish Crew Member" then
                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-                                repeat task.wait()
+                                repeat
+                                    wait()
+                                    StartMagnet = true
+                                    FastAttack = true
                                     if _G.Settings.Configs["Auto Haki"] then
                                         if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
                                             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
                                                 "Buso")
                                         end
                                     end
-                                    EquipWeapon(_G.Settings.Configs["Select Weapon"])
-                                    v.HumanoidRootPart.CanCollide = false
+                                    if not game.Players.LocalPlayer.Character:FindFirstChild(_G.Settings.Configs["Select Weapon"]) then
+                                        wait()
+                                        EquipWeapon(_G.Settings.Configs["Select Weapon"])
+                                    end
+                                    PosMon = v.HumanoidRootPart.CFrame
+                                    if not _G.Settings.Configs["Fast Attack"] then
+                                        game:GetService 'VirtualUser':CaptureController()
+                                        game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                    end
+                                    v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+                                    if _G.Settings.Configs["Show Hitbox"] then
+                                        v.HumanoidRootPart.Transparency = _G.Hitbox_LocalTransparency
+                                    else
+                                        v.HumanoidRootPart.Transparency = 1
+                                    end
+                                    v.Humanoid.JumpPower = 0
                                     v.Humanoid.WalkSpeed = 0
-                                    PosNarathiwat = v.HumanoidRootPart.CFrame
-                                    v.HumanoidRootPart.Size = Vector3.new(50,50,50)
-                                    toTarget(v.HumanoidRootPart.CFrame * CFrame.new(0, _G.Settings.Configs["Distance Auto Farm"], 0))
-                                    game:GetService("VirtualUser"):CaptureController()
-                                    game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
+                                    v.HumanoidRootPart.CanCollide = false
+                                    v.Humanoid:ChangeState(11)
+                                    toTarget(v.HumanoidRootPart.CFrame *
+                                        CFrame.new(0, _G.Settings.Configs["Distance Auto Farm"], 0))
                                 until not _G.Fish or not v.Parent or v.Humanoid.Health <= 0
 
                             end
@@ -6898,21 +6945,37 @@ spawn(function()
                     for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                         if v.Name == "Shark" then
                             if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-                                repeat task.wait()
+                                repeat
+                                    wait()
+                                    StartMagnet = true
+                                    FastAttack = true
                                     if _G.Settings.Configs["Auto Haki"] then
                                         if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
                                             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
                                                 "Buso")
                                         end
                                     end
-                                    EquipWeapon(_G.Settings.Configs["Select Weapon"])
-                                    v.HumanoidRootPart.CanCollide = false
+                                    if not game.Players.LocalPlayer.Character:FindFirstChild(_G.Settings.Configs["Select Weapon"]) then
+                                        wait()
+                                        EquipWeapon(_G.Settings.Configs["Select Weapon"])
+                                    end
+                                    PosMon = v.HumanoidRootPart.CFrame
+                                    if not _G.Settings.Configs["Fast Attack"] then
+                                        game:GetService 'VirtualUser':CaptureController()
+                                        game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                    end
+                                    v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+                                    if _G.Settings.Configs["Show Hitbox"] then
+                                        v.HumanoidRootPart.Transparency = _G.Hitbox_LocalTransparency
+                                    else
+                                        v.HumanoidRootPart.Transparency = 1
+                                    end
+                                    v.Humanoid.JumpPower = 0
                                     v.Humanoid.WalkSpeed = 0
-                                    v.HumanoidRootPart.Size = Vector3.new(50,50,50)
-                                    PosNarathiwat = v.HumanoidRootPart.CFrame
-                                    toTarget(v.HumanoidRootPart.CFrame * CFrame.new(0, _G.Settings.Configs["Distance Auto Farm"], 0))
-                                    game:GetService("VirtualUser"):CaptureController()
-                                    game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
+                                    v.HumanoidRootPart.CanCollide = false
+                                    v.Humanoid:ChangeState(11)
+                                    toTarget(v.HumanoidRootPart.CFrame *
+                                        CFrame.new(0, _G.Settings.Configs["Distance Auto Farm"], 0))
                                 until not _G.Shark or not v.Parent or v.Humanoid.Health <= 0
 
                             end
