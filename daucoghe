@@ -1655,7 +1655,7 @@ task.spawn(function()
     game:GetService("RunService").Stepped:Connect(function()
         pcall(function()
             --[World 1]
-            if _G.Settings.Main["Auto Farm Level"] or _G.AutoCandy or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
+            if _G.Settings.Main["Auto Farm Level"] or _G.AutoFarmBoss or _G.AutoCandy or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
                 _G.Settings.Main["Auto Saber"] or _G.Settings.Main["Auto Pople"] or _G.Settings.Main["Chest8"] or _G.Settings.Boss["Auto Farm Boss"] or _G.Settings.Boss["Auto All Boss"] or _G.Settings.Boss["Auto All Boss"] or
                 --[World 2]
                 _G.Settings.Main["Auto Third Sea"] or _G.Settings.Main["Auto Bartilo Quest"] or _G.Settings.Main["Auto Dark Coat"] or _G.Settings.Main["Auto Swan Glasses"] or
@@ -1718,7 +1718,7 @@ end)
 spawn(function()
     while wait(.1) do
         pcall(function()
-            if _G.Settings.Main["Auto Farm Level"] or _G.AutoCandy or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
+            if _G.Settings.Main["Auto Farm Level"] or _G.AutoFarmBoss or _G.AutoCandy or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
                 _G.Settings.Main["Auto Saber"] or _G.Settings.Main["Auto Pople"] or _G.Settings.Main["Chest8"] or _G.Settings.Boss["Auto Farm Boss"] or _G.Settings.Boss["Auto All Boss"] or _G.Settings.Boss["Auto All Boss"] or
                 --[World 2]
                 _G.Settings.Main["Auto Third Sea"] or _G.Settings.Main["Auto Bartilo Quest"] or _G.Settings.Main["Auto Dark Coat"] or _G.Settings.Main["Auto Swan Glasses"] or
@@ -1771,7 +1771,7 @@ end)
 
 spawn(function()
     game:GetService("RunService").Stepped:Connect(function()
-        if _G.Settings.Main["Auto Farm Level"] or _G.AutoCandy or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
+        if _G.Settings.Main["Auto Farm Level"] or _G.AutoFarmBoss or _G.AutoCandy or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
             _G.Settings.Main["Auto Saber"] or _G.Settings.Main["Auto Pople"] or _G.Settings.Main["Chest8"] or _G.Settings.Boss["Auto Farm Boss"] or _G.Settings.Boss["Auto All Boss"] or _G.Settings.Boss["Auto All Boss"] or
             --[World 2]
             _G.Settings.Main["Auto Third Sea"] or _G.Settings.Main["Auto Bartilo Quest"] or _G.Settings.Main["Auto Dark Coat"] or _G.Settings.Main["Auto Swan Glasses"] or
@@ -1814,7 +1814,7 @@ end
 spawn(function()
     while task.wait() do
         pcall(function()
-            if _G.Settings.Main["Auto Farm Level"] or _G.AutoCandy or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
+            if _G.Settings.Main["Auto Farm Level"] or _G.AutoFarmBoss or _G.AutoCandy or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
                 _G.Settings.Main["Auto Saber"] or _G.Settings.Main["Auto Pople"] or _G.Settings.Main["Chest8"] or _G.Settings.Boss["Auto Farm Boss"] or _G.Settings.Boss["Auto All Boss"] or _G.Settings.Boss["Auto All Boss"] or
                 --[World 2]
                 _G.Settings.Main["Auto Third Sea"] or _G.Settings.Main["Auto Bartilo Quest"] or _G.Settings.Main["Auto Dark Coat"] or _G.Settings.Main["Auto Swan Glasses"] or
@@ -1854,7 +1854,7 @@ end)
 
 spawn(function() ------body velocity
     game:GetService("RunService").Stepped:Connect(function()
-        if _G.Settings.Main["Auto Farm Level"] or _G.AutoCandy or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
+        if _G.Settings.Main["Auto Farm Level"] or _G.AutoFarmBoss or _G.AutoCandy or _G.TweenToKitsune or _G.Terror or _G.Fish or _G.Shark or _G.Pira or _G.Settings.Main["Neareast Farm"] or _G.Mirage or _G.TeleportGear or _G.Settings.Main["Auto New World"] or _G.Settings.Fruits["Tween To Fruit Spawn"] or
             _G.Settings.Main["Auto Saber"] or _G.Settings.Main["Auto Pople"] or _G.Settings.Main["Chest8"] or _G.Settings.Boss["Auto Farm Boss"] or _G.Settings.Boss["Auto All Boss"] or _G.Settings.Boss["Auto All Boss"] or
             --[World 2]
             _G.Settings.Main["Auto Third Sea"] or _G.Settings.Main["Auto Bartilo Quest"] or _G.Settings.Main["Auto Dark Coat"] or _G.Settings.Main["Auto Swan Glasses"] or
@@ -6320,16 +6320,16 @@ Main:Toggle("Auto Farm Material", AutoFarmMaterial, function(x)
     end)
 end)
 
-Main:Seperator("Elite Hunter")
+Main:Seperator("Boss Farm")
 
 local Elite_Hunter_Status = Main:Label("Status : N/Q")
     spawn(function()
         while wait() do
             pcall(function()
                 if game:GetService("ReplicatedStorage"):FindFirstChild("Diablo") or game:GetService("ReplicatedStorage"):FindFirstChild("Deandre") or game:GetService("ReplicatedStorage"):FindFirstChild("Urban") or game:GetService("Workspace").Enemies:FindFirstChild("Diablo") or game:GetService("Workspace").Enemies:FindFirstChild("Deandre") or game:GetService("Workspace").Enemies:FindFirstChild("Urban") then
-                    Elite_Hunter_Status:Set("Elite Hunter : 🟢")
+                    Elite_Hunter_Status:Set("Elite Hunter : 🟢  Yes")
                 else
-                    Elite_Hunter_Status:Set("Elite Hunter : 🔴")
+                    Elite_Hunter_Status:Set("Elite Hunter : 🔴 No")
                 end
             end)
         end
@@ -6499,6 +6499,117 @@ local Elite_Hunter_Status = Main:Label("Status : N/Q")
             end
         end)
     end)
+
+---------------------------------------------------------------------------------------------------------------------------
+    local Boss = {}
+
+    for i, v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
+        if string.find(v.Name, "Boss") then
+            if v.Name == "Ice Admiral" then
+                else
+                table.insert(Boss, v.Name)
+            end
+        end
+    end
+    
+    local bossCheck = {}
+    local bossNames = { "The Gorilla King", "Bobby", "The Saw", "Yeti", "Mob Leader", "Vice Admiral", "Warden", "Chief Warden", "Swan", "Saber Expert", "Magma Admiral", "Fishman Lord", "Wysper", "Thunder God", "Cyborg", "Greybeard", "Diamond", "Jeremy", "Fajita", "Don Swan", "Smoke Admiral", "Awakened Ice Admiral", "Tide Keeper", "Order", "Darkbeard", "Cursed Captain", "Stone", "Island Empress", "Kilo Admiral", "Captain Elephant", "Beautiful Pirate", "Longma", "Cake Queen", "Soul Reaper", "Rip_Indra", "Cake Prince", "Dough King" }
+    
+    
+    if World1 or World2 or World3 then
+        for _, bossName in pairs(bossNames) do
+            if game:GetService("ReplicatedStorage"):FindFirstChild(bossName) then
+                table.insert(bossCheck, bossName)
+            end
+        end
+    end
+    
+    for _, name in pairs(Boss) do
+        table.insert(bossCheck, name)
+    end
+---------------------------------------------------
+
+Main:Dropdown("Select Boss",bossCheck,function(value)
+    _G.SelectBoss = value
+end)
+
+
+Main:Button("Refresh Boss",function()
+    BossName:Clear()
+    wait(0.1)
+    for i, v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
+        if (v.Name == "rip_indra" or v.Name == "Ice Admiral")
+                            or (v.Name == "Saber Expert" or v.Name == "The Saw" or v.Name == "Greybeard" or v.Name == "Mob Leader" or v.Name == "The Gorilla King" or v.Name == "Bobby" or v.Name == "Yeti" or v.Name == "Vice Admiral" or v.Name == "Warden" or v.Name == "Chief Warden" or v.Name == "Swan" or v.Name == "Magma Admiral" or v.Name == "Fishman Lord" or v.Name == "Wysper" or v.Name == "Thunder God" or v.Name == "Cyborg")
+                            or (v.Name == "Don Swan" or v.Name == "Diamond" or v.Name == "Jeremy" or v.Name == "Fajita" or v.Name == "Smoke Admiral" or v.Name == "Awakened Ice Admiral" or v.Name == "Tide Keeper" or v.Name == "Order" or v.Name == "Darkbeard")
+                            or (v.Name == "Stone" or v.Name == "Island Empress" or v.Name == "Kilo Admiral" or v.Name == "Captain Elephant" or v.Name == "Beautiful Pirate" or v.Name == "Cake Queen" or v.Name == "rip_indra True Form" or v.Name == "Longma" or v.Name == "Soul Reaper" or v.Name == "Cake Prince" or v.Name == "Dough King") then
+            BossName:Add(v.Name)
+        end
+    end
+    end)
+
+
+Main:Toggle("Auto Boss",false,function(value)
+    _G.AutoFarmBoss = value
+    if value == false then
+        wait()
+        toTarget(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
+        wait()
+    end
+end)
+spawn(function()
+    while wait() do
+        if _G.AutoFarmBoss then
+            pcall(function()
+                if game:GetService("Workspace").Enemies:FindFirstChild(_G.SelectBoss) then
+                    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+                        if v.Name == _G.SelectBoss then
+                            if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+                                repeat wait()
+                                    StartMagnet = true
+                                    FastAttack = true
+                                    if _G.Settings.Configs["Auto Haki"] then
+                                        if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
+                                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buso")
+                                        end
+                                    end
+                                    if not game.Players.LocalPlayer.Character:FindFirstChild(_G.Settings.Configs["Select Weapon"]) then
+                                        wait()
+                                        EquipWeapon(_G.Settings.Configs["Select Weapon"])
+                                    end
+                                    PosMon = v.HumanoidRootPart.CFrame
+                                    if not _G.Settings.Configs["Fast Attack"] then
+                                        game:GetService'VirtualUser':CaptureController()
+                                        game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                    end
+                                    v.HumanoidRootPart.Size = Vector3.new(60,60,60)
+                                    if _G.Settings.Configs["Show Hitbox"] then
+                                        v.HumanoidRootPart.Transparency = _G.Hitbox_LocalTransparency
+                                    else
+                                        v.HumanoidRootPart.Transparency = 1
+                                    end
+                                    v.Humanoid.JumpPower = 0
+                                    v.Humanoid.WalkSpeed = 0
+                                    v.HumanoidRootPart.CanCollide = false
+                                    v.Humanoid:ChangeState(11)
+                                    toTarget(v.HumanoidRootPart.CFrame * CFrame.new(0,_G.Settings.Configs["Distance Auto Farm"],0))
+                                until not _G.AutoFarmBoss or not v.Parent or v.Humanoid.Health <= 0
+                                StartMagnet = false
+                                FastAttack = false
+                            end
+                        end
+                    end
+                else
+                    if game:GetService("ReplicatedStorage"):FindFirstChild(_G.SelectBoss) then
+                        toTarget(game:GetService("ReplicatedStorage"):FindFirstChild(_G.SelectBoss).HumanoidRootPart.CFrame * CFrame.new(5,10,7))
+                    end
+                end
+            end)
+        end
+    end
+end)
+
+
+
 
 Main:Seperator("Chrismas Event")
 
@@ -9690,10 +9801,8 @@ _G.Settings.Configs["Double Quest"] = false
 Setting:Dropdown("Select Fast Attack",{"Fast","Normal","Slow"},function(value)
     _G.Settings.Configs["Fast Attack Type"] = value
 end)
+    _G.Settings.Configs["Fast Attack"] = true
 
-Setting:Toggle("Fast Attack",_G.Settings.Configs["Fast Attack"],function(value)
-    _G.Settings.Configs["Fast Attack"] = value
-end)
 
 
 coroutine.wrap(function()
@@ -9704,11 +9813,11 @@ coroutine.wrap(function()
 			if FastAttack and _G.Settings.Configs["Fast Attack"] then
 				AttackFunction()
 				if _G.Settings.Configs["Fast Attack Type"] == "Normal" then
-					if tick() - cooldownfastattack > .9 then wait(.1) cooldownfastattack = tick() end
+					if tick() - cooldownfastattack > .9 then wait(0.13) cooldownfastattack = tick() end
 				elseif _G.Settings.Configs["Fast Attack Type"] == "Fast" then
-					if tick() - cooldownfastattack > 1.5 then wait(.01) cooldownfastattack = tick() end
+					if tick() - cooldownfastattack > 1.5 then wait(0.01) cooldownfastattack = tick() end
 				elseif _G.Settings.Configs["Fast Attack Type"] == "Slow" then
-					if tick() - cooldownfastattack > .3 then wait(.7) cooldownfastattack = tick() end
+					if tick() - cooldownfastattack > .3 then wait(0.5) cooldownfastattack = tick() end
 				end
 			elseif FastAttack and _G.Settings.Configs["Fast Attack"] == false then
 				if ac.hitboxMagnitude ~= 55 then
@@ -9796,7 +9905,6 @@ Raid:Dropdown("Select Raids",SelectRaids, function(value)
     
 end)
 
-
 Raid:Toggle("Kill Aura", _G.Settings.Raids["Kill Aura"], function(value)
     _G.Settings.Raids["Kill Aura"] = value
     
@@ -9811,8 +9919,6 @@ Raid:Toggle("Auto Awake", _G.Settings.Raids["Auto Awakened"], function(value)
     _G.Settings.Raids["Auto Awakened"] = value
     
 end)
-
-
 
 
 task.spawn(function()
