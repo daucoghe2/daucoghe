@@ -1496,7 +1496,7 @@ _G.Settings = {
 
 
         ["Fast Attack"] = true,
-        ["Fast Attack Type"] = { "Fast" }, --{Normal,Fast,Slow}
+		["Fast Attack Type"] = {"Normal"}, --{Normal,Fast,Slow}
 
         ["Select Weapon"] = {},
 
@@ -4937,98 +4937,6 @@ task.spawn(function()
     end
 end)
 
-       
- 
-
-coroutine.wrap(function()
-    local interval = 0.1     -- ระยะเวลารอเริ่มต้น (0.1 วินาที)/0.000000000000000001
-    while task.wait(interval) do
-        local ac = CombatFrameworkR.activeController
-        if ac and ac.equipped then
-            if FastAttack and _G.Settings.Configs["Fast Attack"] then
-                AttackFunction()
-                if _G.Select_Fast_Attack == "Normal" then
-                    if tick() - cooldownfastattack > 1.1 then     --0.9
-                        interval = .1                         -- ระยะเวลารอสำหรับการเร็วปกติ (0.1 วินาที)เพิ่ม0เพิ่มหนึ่งตัวแต่ละอัน
-                        cooldownfastattack = tick()
-                    end
-                elseif _G.Select_Fast_Attack == "Fast" then
-                    if tick() - cooldownfastattack > 1.5 then     --1.5
-                        interval = .001                          -- ระยะเวลารอสำหรับการเร็ว (0.01 วินาที)
-                        cooldownfastattack = tick()
-                    end
-                elseif _G.Select_Fast_Attack == "Slow" then
-                    if tick() - cooldownfastattack > 0.3 then
-                        interval = .8     -- ระยะเวลารอสำหรับการช้า (0.7 วินาที)
-                        cooldownfastattack = tick()
-                    end
-                end
-            elseif FastAttack and _G.Settings.Configs["Fast Attack"] == false then
-                if ac.hitboxMagnitude ~= 55 then
-                    ac.hitboxMagnitude = 55
-                end
-                ac:attack()
-            end
-        end
-    end
-end)()
-
-
-
-if game.Players.LocalPlayer.Data.Level.Value == 1 or game.Players.LocalPlayer.Data.Level.Value <= 310 then
-    _G.kuy = false
-else
-    _G.kuy = true
-end
-
-if _G.kuy then
-local Module = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
-local CombatFramework = debug.getupvalues(Module)[2]
-local CameraShakerR = require(game.ReplicatedStorage.Util.CameraShaker)
-spawn(function()
-    while true do
-        if FastAttack or _G.Settings.Configs["Fast Attack"] then
-            pcall(function()
-                CameraShakerR:Stop()
-                CombatFramework.activeController.attacking = false
-                CombatFramework.activeController.timeToNextAttack = 0 --/-(math.huge ^ math.huge ^ math.huge)
-                CombatFramework.activeController.increment = 0 --3
-                CombatFramework.activeController.hitboxMagnitude = 55
-                CombatFramework.activeController.blocking = false
-                CombatFramework.activeController.timeToNextBlock = 0 --0
-                CombatFramework.activeController.focusStart = 0
-                CombatFramework.activeController.humanoid.AutoRotate = true
-            end)
-        end
-        task.wait(0)
-    end
-end)
-end
-
-
-getgenv().A = require(game:GetService("ReplicatedStorage").CombatFramework.RigLib).wrapAttackAnimationAsync
-getgenv().B = require(game.Players.LocalPlayer.PlayerScripts.CombatFramework.Particle).play
-spawn(function()
-    while wait() do
-        if FastAttack and _G.Settings.Configs["Fast Attack"] then
-            pcall(function()
-                require(game:GetService("ReplicatedStorage").CombatFramework.RigLib).wrapAttackAnimationAsync = function(
-                    a1, a2, a3, a4, a5)
-                    local GetBladeHits = require(game:GetService("ReplicatedStorage").CombatFramework.RigLib)
-                        .getBladeHits(a2, a3, a4)
-                    if GetBladeHits then
-                        require(game:GetService("ReplicatedStorage").CombatFramework.RigLib).play = function() end
-                        a1:Play(0.2, 0.2, 0.2)
-                        a5(GetBladeHits)
-                        require(game:GetService("ReplicatedStorage").CombatFramework.RigLib).play = getgenv().B
-                        wait(.5)
-                        a1:Stop()
-                    end
-                end
-            end)
-        end
-    end
-end)
 
 
 Main:Seperator("Farming")
@@ -9777,15 +9685,44 @@ end)
 local MyLevelfastautofarm = game.Players.LocalPlayer.Data.Level.Value
 _G.Settings.Configs["Double Quest"] = false
 --------------------------------------------------------------------------------------------------------------------------
---Fast Attack
-    _G.Settings.Configs["Fast Attack"] = true
-	_G.Settings.Configs["Fast Attack Type"] = 0.175
--------------------------------------------------------------------------------------------------------------------------	
 
 
+Setting:Dropdown("Select Fast Attack",{"Fast","Normal","Slow"},function(value)
+    _G.Settings.Configs["Fast Attack Type"] = value
+end)
+
+Setting:Toggle("Fast Attack",_G.Settings.Configs["Fast Attack"],function(value)
+    _G.Settings.Configs["Fast Attack"] = value
+end)
+
+
+coroutine.wrap(function()
+	while task.wait() do
+		local ac = CombatFrameworkR.activeController
+		if ac and ac.equipped then
+			wait(.1)
+			if FastAttack and _G.Settings.Configs["Fast Attack"] then
+				AttackFunction()
+				if _G.Settings.Configs["Fast Attack Type"] == "Normal" then
+					if tick() - cooldownfastattack > .9 then wait(.1) cooldownfastattack = tick() end
+				elseif _G.Settings.Configs["Fast Attack Type"] == "Fast" then
+					if tick() - cooldownfastattack > 1.5 then wait(.01) cooldownfastattack = tick() end
+				elseif _G.Settings.Configs["Fast Attack Type"] == "Slow" then
+					if tick() - cooldownfastattack > .3 then wait(.7) cooldownfastattack = tick() end
+				end
+			elseif FastAttack and _G.Settings.Configs["Fast Attack"] == false then
+				if ac.hitboxMagnitude ~= 55 then
+					ac.hitboxMagnitude = 55
+				end
+				ac:attack()
+			end
+		end
+	end
+end)()
+
+----------------------------------------------------------------------------------------
 Setting:Toggle("Bypass TP", _G.Settings.Configs["Bypass TP"], function(value)
     _G.Settings.Configs["Bypass TP"] = value
-    
 end)
 
 
