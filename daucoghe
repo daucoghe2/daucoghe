@@ -1,3 +1,4 @@
+
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 
@@ -9801,8 +9802,8 @@ _G.Settings.Configs["Double Quest"] = false
 Setting:Dropdown("Select Fast Attack",{"Fast","Normal","Slow"},function(value)
     _G.Settings.Configs["Fast Attack Type"] = value
 end)
+---Fast attack
     _G.Settings.Configs["Fast Attack"] = true
-
 
 
 coroutine.wrap(function()
@@ -9813,11 +9814,11 @@ coroutine.wrap(function()
 			if FastAttack and _G.Settings.Configs["Fast Attack"] then
 				AttackFunction()
 				if _G.Settings.Configs["Fast Attack Type"] == "Normal" then
-					if tick() - cooldownfastattack > .9 then wait(0.13) cooldownfastattack = tick() end
+					if tick() - cooldownfastattack > .9 then wait(.025) cooldownfastattack = tick() end
 				elseif _G.Settings.Configs["Fast Attack Type"] == "Fast" then
-					if tick() - cooldownfastattack > 1.5 then wait(0.01) cooldownfastattack = tick() end
+					if tick() - cooldownfastattack > 1.5 then wait(.015) cooldownfastattack = tick() end
 				elseif _G.Settings.Configs["Fast Attack Type"] == "Slow" then
-					if tick() - cooldownfastattack > .3 then wait(0.5) cooldownfastattack = tick() end
+					if tick() - cooldownfastattack > .3 then wait(.055) cooldownfastattack = tick() end
 				end
 			elseif FastAttack and _G.Settings.Configs["Fast Attack"] == false then
 				if ac.hitboxMagnitude ~= 55 then
@@ -9833,7 +9834,6 @@ end)()
 Setting:Toggle("Bypass TP", _G.Settings.Configs["Bypass TP"], function(value)
     _G.Settings.Configs["Bypass TP"] = value
 end)
-
 
 Setting:Toggle("Auto Haki", _G.Settings.Configs["Auto Haki"], function(value)
     _G.Settings.Configs["Auto Haki"] = value
