@@ -6757,7 +6757,7 @@ spawn(function()
     end
 end)
 
-Main:Toggle("Lụm Hồn",false,function(v)
+Main:Toggle("Lụm Lửa",false,function(v)
     _G.CollectAzure = v
 end)
 spawn(function()
