@@ -9853,7 +9853,7 @@ end)
 
 local UserInputService = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
-Setting:Toggle("White Screen", false, function(value)
+Setting:Toggle("Màn Hình Treo", false, function(value)
         _G.Settings.HUD["White Screen"] = value
         
         if value then
@@ -12117,6 +12117,14 @@ end)
 
 
 M:Seperator("Remove Fog")
+
+
+M:Button("Xoá Xương Mù",function()
+    game:GetService("Lighting"):FindFirstChild("FantasySky")
+    game:GetService("Lighting").FantasySky:Destroy()
+end)
+
+
 M:Toggle("Xoá Xương Mù", _G.Settings.Misc["No Fog"], function(value)
     _G.Settings.Misc["No Fog"] = value
     task.spawn(function()
