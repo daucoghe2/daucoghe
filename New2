@@ -151,18 +151,18 @@ MinimizeKey = Enum.KeyCode.Delete
 })
 
 local Tabs = {
-Main = Window:AddTab({ Title = "Main", Icon = "home" }),wait(1),
-Item = Window:AddTab({ Title = "Item", Icon = "swords" }),wait(),
-Stats = Window:AddTab({ Title = "Stats", Icon = "plus-circle" }),wait(1),
-Shop = Window:AddTab({ Title = "Shop", Icon = "shopping-cart" }),wait(1),
-Island = Window:AddTab({ Title = "Island", Icon = "palmtree" }),wait(1),
-Raid = Window:AddTab({ Title = "Dungeon", Icon = "sword" }),wait(1),
-RaceV4 = Window:AddTab({ Title = "Race v4", Icon = "chevrons-right" }),wait(1),
-Fruit = Window:AddTab({ Title = "Fruit", Icon = "apple" }),wait(1),
+Main = Window:AddTab({ Title = "Chính", Icon = "home" }),wait(1),
+Item = Window:AddTab({ Title = "Vật phẩm", Icon = "swords" }),wait(),
+Stats = Window:AddTab({ Title = "Chỉ số", Icon = "plus-circle" }),wait(1),
+Shop = Window:AddTab({ Title = "Cửa hàng", Icon = "shopping-cart" }),wait(1),
+Island = Window:AddTab({ Title = "Đảo", Icon = "palmtree" }),wait(1),
+Raid = Window:AddTab({ Title = "Tập Kích", Icon = "sword" }),wait(1),
+RaceV4 = Window:AddTab({ Title = "Tộc v4", Icon = "chevrons-right" }),wait(1),
+Fruit = Window:AddTab({ Title = "trái", Icon = "apple" }),wait(1),
 ESP = Window:AddTab({ Title = "ESP", Icon = "mountain-snow" }),wait(1),
-Misc = Window:AddTab({ Title = "Miscellaneous", Icon = "list-plus" }),wait(1),
-Visual = Window:AddTab({ Title = "Visual", Icon = "scan-face" }),wait(1),
-Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),wait(1),
+Misc = Window:AddTab({ Title = "Khác", Icon = "list-plus" }),wait(1),
+Visual = Window:AddTab({ Title = "Khác 2", Icon = "scan-face" }),wait(1),
+Settings = Window:AddTab({ Title = "Cài đặt", Icon = "settings" }),wait(1),
 }
 if game.CoreGui:FindFirstChild("MinGamingOpenClose") then
 game.CoreGui:FindFirstChild("MinGamingOpenClose"):Destroy()
