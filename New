@@ -6720,6 +6720,26 @@ pcall(function()
 end)
 end)
 
+
+local ToggleCollectFruit = Tabs.Fruit:AddToggle("ToggleCollectFruit", {Title = "Auto Collect Fruits", Default = false })
+Options.ToggleCollectFruit:SetValue(false)
+ToggleCollectFruit:OnChanged(function(value)
+    _G.Grabfruit = value
+       end)
+spawn(function()
+     while wait(.1) do
+       if _G.Grabfruit then
+             for i,v in pairs(game.Workspace:GetChildren()) do
+              if string.find(v.Name, "Fruit") then
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Handle.CFrame
+         end
+      end    
+   end
+end
+end)
+
+
+
 local ESPPlrToggle = Tabs.ESP:AddToggle("ESPPlr_Toggle", {Title = "ESP Player", Default = false })
 Options.ESPPlr_Toggle:SetValue(false)
 
