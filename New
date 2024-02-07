@@ -6099,9 +6099,9 @@ local SelectRaids = {
 "String",
 "Rumble",
 "Magma",
-"Human: Buddha",
+"Buddha",
 "Sand",
-"Bird: Phoenix",
+"Phoenix",
 "Dough"
 }
 
