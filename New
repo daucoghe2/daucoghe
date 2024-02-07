@@ -6540,6 +6540,20 @@ Callback = function()
 end
 })
 
+
+local ToggleKillplayer = Tabs.Fruit:AddToggle("ToggleKillplayer", {Title = "Kill Player When Trial", Default = false })
+Options.ToggleKillplayer:SetValue(false)
+
+ToggleKillplayer:OnChanged(function(value)
+
+end)
+
+
+
+
+
+
+
 Tabs.RaceV4:AddButton({
 Title = "Teleport To Safe Zone PVP",
 Description = "",
