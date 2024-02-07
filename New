@@ -146,7 +146,7 @@ SubTitle = "By Min Gaming",
 TabWidth = 160,
 Size = UDim2.fromOffset(540, 320),
 Acrylic = true, 
-Theme = "Light",
+Theme = "Darker",
 MinimizeKey = Enum.KeyCode.Delete 
 })
 
