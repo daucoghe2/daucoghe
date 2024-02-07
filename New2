@@ -6463,7 +6463,7 @@ end
 })
 
 Tabs.RaceV4:AddButton({
-Title = " Angel ",
+Title = " Hoàn thành Angel ",
 Description = "",
 Callback = function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Map.SkyTrial.Model.FinishPart.CFrame
@@ -6471,7 +6471,7 @@ end
 })
 
 Tabs.RaceV4:AddButton({
-Title = " Rabbit ",
+Title = " Hoàn thành Rabbit ",
 Description = "",
 Callback = function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Map.MinkTrial.Ceiling.CFrame * CFrame.new(0, -5, 0)
@@ -6479,7 +6479,7 @@ end
 })
 
 Tabs.RaceV4:AddButton({
-Title = " Cyborg ",
+Title = " Hoàn thành Cyborg ",
 Description = "",
 Callback = function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 300, 0)
@@ -6501,6 +6501,20 @@ Callback = function()
     toTarget(CFrame.new(28273.0859375, 14896.5078125, 157.42063903808594))
 end
 })
+
+
+
+local ToggleKillplayer = Tabs.Fruit:AddToggle("ToggleKillplayer", {Title = "Giết Người Chơi Trong Ải", Default = false })
+Options.ToggleKillplayer:SetValue(false)
+
+ToggleKillplayer:OnChanged(function(value)
+
+end)
+
+
+
+
+
 
 FruitList = {
 "Bomb-Bomb",
