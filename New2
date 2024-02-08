@@ -7356,7 +7356,7 @@ function InMyNetWork(object)
 if isnetworkowner then
     return isnetworkowner(object)
 else
-    if (object.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 200 then 
+    if (object.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 350 then 
         return true
     end
     return false
@@ -7377,7 +7377,7 @@ while task.wait() do
     pcall(function()
         if _G.Brimob and _G.BringMob then
             for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-                if not string.find(v.Name,"Boss") and (v.HumanoidRootPart.Position - PosMon.Position).magnitude <= 200 then
+                if not string.find(v.Name,"Boss") and (v.HumanoidRootPart.Position - PosMon.Position).magnitude <= 350 then
                     if InMyNetWork(v.HumanoidRootPart) then
                         v.HumanoidRootPart.CFrame = PosMon
                         v.HumanoidRootPart.Size = Vector3.new(60,60,60)
@@ -7404,7 +7404,7 @@ while wait() do
     pcall(function()
         if _G.Brimob and _G.BringMob then
             for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-                if v.Name == QuestCheck()[3] and (v.HumanoidRootPart.Position - PosMon.Position).magnitude <= 200 then
+                if v.Name == QuestCheck()[3] and (v.HumanoidRootPart.Position - PosMon.Position).magnitude <= 350 then
                     v.HumanoidRootPart.CFrame = PosMon
                     v.HumanoidRootPart.Size = Vector3.new(60,60,60)
                     v.HumanoidRootPart.Transparency = 1
