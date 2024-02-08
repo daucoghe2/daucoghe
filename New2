@@ -6504,7 +6504,7 @@ end
 
 
 
-local ToggleKillplayer = Tabs.Fruit:AddToggle("ToggleKillplayer", {Title = "Giết Người Chơi Trong Ải", Default = false })
+local ToggleKillplayer = Tabs.RaceV4:AddToggle("ToggleKillplayer", {Title = "Giết Người Chơi Trong Ải", Default = false })
 Options.ToggleKillplayer:SetValue(false)
 
 ToggleKillplayer:OnChanged(function(value)
