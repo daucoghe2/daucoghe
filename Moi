@@ -10323,7 +10323,8 @@ end
 		"Magma",
 		"Buddha",
 		"Sand",
-		"Phoenix"
+		"Phoenix",
+		"Dough"
 	}
 	
 	MainDungeonSection:AddDropdown({
