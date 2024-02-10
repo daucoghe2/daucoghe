@@ -12748,7 +12748,7 @@ MiscSection1:AddButton({
 		kaituncap()
 	end
 })
-FakeDamage("Min Gaming")
+FakeDamage("Min_Gaming_On_Top")
 Vec("<Color=Yellow>Min Gaming loaded Finished<Color=/>")
 	--Vec("<Color=Yellow>:ENG:\n:If the gui doesn't load, use Fluxus in the Executor room:\n:TH:\n:ถ้าหน้าต่างโปรไม่โหลดให้ใช้ Fluxus ที่ผมแจกในห้อง Executor:<Color=/>")
 else
