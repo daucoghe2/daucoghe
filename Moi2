@@ -7,8 +7,9 @@ warn(_G.Print)
 ---------
 if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7449423635 then 
 	setfpscap(999)
-	_G.Color = Color3.fromRGB(0, 255, 0)
+	_G.Color = Color3.fromRGB(0, 0, 255)
 	_G.Settings = {
+        BringMob = true,
 		Auto_Farm_Level = false,
 		Auto_Farm_Fast = true,
 		Auto_New_World = false,
@@ -27,7 +28,6 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
 		Auto_Set_Spawn = true,
 		Method = "Upper",
 		DistanceAutoFarm = 30,
-		Brimob = true,
 		Select_Stats = {},
 		Bypass = false,
 		Rejoin = true,
@@ -4190,7 +4190,7 @@ function GetMaterial(matname)
 end
 
     MainSection:AddToggle({
-		Name = "Auto Farm Nearest",
+		Name = "Đánh Quái Gần",
 		Flag = "Auto_Farm_Nearest",
 		Value = _G.NeareastFarm,
 		Callback = function(value)
@@ -6326,90 +6326,37 @@ spawn(function()
 		end)
 	
 
-
+    getgenv().BringMob = true
 	SettingSection:AddToggle{
 		Name = "Gom quái",
 		Flag = "Bring_Mob",
-		Value = _G.Settings.Brimob,
+		Value = _G.Settings.BringMob,
 		Callback  = function(value)
-			_G.Brimob = value
-			_G.Settings.Brimob = value
+            getgenv().BringMob = value
 			SaveSettings()
 		end
 	}
-	function InMyNetWork(object)
-		if isnetworkowner then
-			return isnetworkowner(object)
-		else
-			if (object.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 300 then 
-				return true
-			end
-			return false
-		end
-	end
-	spawn(function()
-		while true do wait()
-			if setscriptable then
-				setscriptable(game.Players.LocalPlayer, "SimulationRadius", true)
-			end
-			if sethiddenproperty then
-				sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
-			end
-		end
-	end)
-	spawn(function()
-		while task.wait() do
-			pcall(function()
-				if _G.Brimob then
-					for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-						if not string.find(v.Name,"Boss") and (v.HumanoidRootPart.Position - PosMon.Position).magnitude <= 300 then
-							if InMyNetWork(v.HumanoidRootPart) then
-								v.HumanoidRootPart.CFrame = PosMon
-								v.HumanoidRootPart.Size = Vector3.new(60,60,60)
-								v.HumanoidRootPart.Transparency = 1
-								v.Humanoid.JumpPower = 0
-								v.Humanoid.WalkSpeed = 0
-								if v.Humanoid:FindFirstChild("Animator") then
-									v.Humanoid.Animator:Destroy()
-								end
-								v.HumanoidRootPart.CanCollide = false
-								v.Head.CanCollide = false
-								v.Humanoid:ChangeState(11)
-								v.Humanoid:ChangeState(14)
-								sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius",  math.huge)
-							end
-						end
-					end
-				end
-			end)
-		end
-	end)
-	spawn(function()
-		while wait() do
-			pcall(function()
-				if _G.Brimob then
-					for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-						if v.Name == QuestCheck()[3] and (v.HumanoidRootPart.Position - PosMon.Position).magnitude <= 300 then
-							v.HumanoidRootPart.CFrame = PosMon
-							v.HumanoidRootPart.Size = Vector3.new(60,60,60)
-							v.HumanoidRootPart.Transparency = 1
-							v.Humanoid.JumpPower = 0
-                            v.Humanoid.WalkSpeed = 0
-							if v.Humanoid:FindFirstChild("Animator") then
-								v.Humanoid.Animator:Destroy()
-							end
-							v.HumanoidRootPart.CanCollide = false
-							v.Head.CanCollide = false
-							v.Humanoid:ChangeState(11)
-							v.Humanoid:ChangeState(14)
-							sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius",  math.huge)
-						end
-					end
-				end
-			end)
-		end
-	end)
-	  
+    spawn(function()
+        while task.wait() do
+            pcall(function()
+                if getgenv().BringMob then
+                    for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+                        if not string.find(v.Name,"Boss") and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 300 then
+                            v.HumanoidRootPart.Size = Vector3.new(60,60,60)
+                            v.Head.CanCollide = false
+                            v.HumanoidRootPart.CFrame = PosMon
+                            v.HumanoidRootPart.CanCollide = false
+                            v.Head.CanCollide = false
+                            if v.Humanoid:FindFirstChild("Animator") then
+                                v.Humanoid.Animator:Destroy()
+                            end
+                            sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)
+                        end
+                    end
+                end
+            end)
+        end
+    end)
 	SettingSection:AddToggle({
 		Name = "di chuyển = reset",
 		Flag = "Bypass_Tp",
@@ -6421,11 +6368,8 @@ spawn(function()
 			SaveSettings()
 		end
 	})
-
-	--
 	_G.Auto_CFrame = true
 	_G.Rejoin = true
-	--
 	spawn(function()
 		while wait() do
 			if _G.Rejoin then
@@ -12751,7 +12695,6 @@ MiscSection1:AddButton({
 })
 FakeDamage("Min_Gaming_On_Top")
 Vec("<Color=Yellow>Min Gaming loaded Finished<Color=/>")
-	--Vec("<Color=Yellow>:ENG:\n:If the gui doesn't load, use Fluxus in the Executor room:\n:TH:\n:ถ้าหน้าต่างโปรไม่โหลดให้ใช้ Fluxus ที่ผมแจกในห้อง Executor:<Color=/>")
 else
 	game.Players.LocalPlayer:Kick("..")
 end
