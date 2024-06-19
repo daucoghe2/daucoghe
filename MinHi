@@ -945,7 +945,7 @@ function InstantChooseGear()
         end
         task.wait(300)
     else
-        game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Hirimi Hub", Text = "You Hadn't Gear", Duration = 30})
+        game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Min Hub", Text = "You Hadn't Gear", Duration = 30})
         task.wait(30)
     end
 end
@@ -1389,9 +1389,9 @@ function GetQuestV3()
     if v33000 == 0 then
         RS.Remotes.CommF_:InvokeServer("Wenlocktoad", "2")
         wait(.1)
-        Notify("Hirimi Hub", "Claimed Quest V3", 10)
+        Notify("Min Hub", "Claimed Quest V3", 10)
     elseif v33000 == -1 then
-        Notify("Hirimi Hub", "You Not Have V2")
+        Notify("Min Hub", "You Not Have V2")
     end
 end
 function BypassTele(PosSelect)
@@ -2100,7 +2100,6 @@ for r, v in pairs(SkillSelected) do
         table.insert(RealSkillSelected, r)
     end
 end
-
 local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
     Title = "Select Skill [Click Skill Enable]",
     Values = skill,
@@ -2758,7 +2757,7 @@ spawn(function()
                                 ToTween(Target.HumanoidRootPart.CFrame * CFrame.new(0,30,0))
                             end
                         else
-                            Notify("Hirimi Hub", "Not Found Boss, Start Hop", 10)
+                            Notify("Min Hub", "Not Found Boss, Start Hop", 10)
                             HopServer()
                         end
                     elseif game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BartiloQuestProgress", "Bartilo") == 2 then
@@ -2796,7 +2795,7 @@ spawn(function()
                             RS.Remotes.CommF_:InvokeServer("Alchemist", "2")
                             if not LP.Backpack:FindFirstChild("Flower 1") and not LP.Character:FindFirstChild("Flower 1")then
                                 if WS.Flower1.Transparency ~= 1 then
-                                    Notify("Hirimi Hub", "Collecting Flower 1", 10)
+                                    Notify("Min Hub", "Collecting Flower 1", 10)
                                     if not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Flower 1") and not game:GetService("Players").LocalPlayer.Character:FindFirstChild("Flower 1") then
                                         ToTween(game:GetService("Workspace").Flower1.CFrame)
                                     else
@@ -2804,13 +2803,13 @@ spawn(function()
                                     end
                                 else
                                     if game.Lighting.ClockTime > 3 and game.Lighting.ClockTime < 16 then
-                                        Notify("Hirimi Hub", "Hop Night", 10)
+                                        Notify("Min Hub", "Hop Night", 10)
                                         HopServer()
                                     end
                                 end
                             elseif not LP.Backpack:FindFirstChild("Flower 2") and not LP.Character:FindFirstChild("Flower 2") then
                                 if WS.Flower2.Transparency ~= 1 then
-                                    Notify("Hirimi Hub", "Collecting Flower 2", 10)
+                                    Notify("Min Hub", "Collecting Flower 2", 10)
                                 end
                                 if not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Flower 2") and not game:GetService("Players").LocalPlayer.Character:FindFirstChild("Flower 2") then
                                     ToTween(game:GetService("Workspace").Flower2.CFrame)
@@ -2818,7 +2817,7 @@ spawn(function()
                                     StopTween()
                                 end
                             elseif not LP.Backpack:FindFirstChild("Flower 3") and not LP.Character:FindFirstChild("Flower 3") then
-                                Notify("Hirimi Hub", "Collecting Flower 3", 10)
+                                Notify("Min Hub", "Collecting Flower 3", 10)
                                 if Enemies:FindFirstChild("Zombie") then
                                     for i,v in pairs(Enemies:GetChildren()) do
                                         if v.Name == "Zombie" then
@@ -2856,9 +2855,9 @@ spawn(function()
                         for r, v in pairs(sk) do
                             sk2 = sk2 .. v .. ","
                         end
-                        Notify("Hirimi Hub", sk2, 15)
+                        Notify("Min Hub", sk2, 15)
                         if #sk < 3 and CheckVerRace() == "Human V2" then
-                            Notify("Hirimi Hub", "Hop Server Have 3 Boss", 15)
+                            Notify("Min Hub", "Hop Server Have 3 Boss", 15)
                             task.wait(1)
                             HopServer()
                         end
@@ -2866,7 +2865,7 @@ spawn(function()
                             for aq, cg in pairs(BossQuest) do
                                 Notify("Race: ", CheckVerRace())
                                 if cg and CheckVerRace() == "Human V2" then
-                                    Notify("Hirimi Hub", "Start Killing " .. aq .. " Boss To Up Human V3")
+                                    Notify("Min Hub", "Start Killing " .. aq .. " Boss To Up Human V3")
                                     Target = ReturnBosses(aq)
                                     repeat wait()
                                         if Target and Enemies:FindFirstChild(Target.Name) and Target:FindFirstChild("Humanoid") and Target:FindFirstChild("HumanoidRootPart") and Target.Humanoid.Health > 0 then
@@ -2904,7 +2903,7 @@ spawn(function()
                                 TargetedPlayer = nil
                             end
                         else
-                            Notify("Hirimi Hub", "Not Found Player, Start Hop", 15)
+                            Notify("Min Hub", "Not Found Player, Start Hop", 15)
                             HopServer()
                         end
                     elseif CheckR == "Fishman V2" then
@@ -2940,10 +2939,10 @@ spawn(function()
                         if ch and CheckR ~= "Mink V3" then
                             ToTween(ch)
                             CountChest = CountChest + 1
-                            Notify("Hirimi Hub", "Remaning " .. 30 - CountChest .. " Chest", 7.5)
+                            Notify("Min Hub", "Remaning " .. 30 - CountChest .. " Chest", 7.5)
                             if CountChest >= 30 then
                                 UpV3NoTween()
-                                Notify("Hirimi Hub", "Race Status: " .. tostring(RS.Remotes.CommF_:InvokeServer("Wenlocktoad", "info")))
+                                Notify("Min Hub", "Race Status: " .. tostring(RS.Remotes.CommF_:InvokeServer("Wenlocktoad", "info")))
                             end
                         elseif ch == nil then
                             repeat wait()
