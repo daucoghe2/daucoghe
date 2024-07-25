@@ -7127,11 +7127,11 @@ end
 
 Sea:Label("Kitsune")
 
-Sea:Toggle("Đến đảo kitsune",false,function(v)
+Sea:Toggle("Đến đảo kitsune",_G.ColorSea,false,function(v)
     TweenToKitsune = v
 end)
 
-Sea:Toggle("Nhặt hồn lửa",false,function(v)
+Sea:Toggle("Nhặt hồn lửa",_G.ColorSea,false,function(v)
     CollectAzure = v
 end)
 spawn(function()
@@ -8797,4 +8797,5 @@ end)
     end)
     end
 end)
+
 end
