@@ -6627,7 +6627,7 @@ spawn(function()
     end
 end)
 
-Sea:Toggle("Mua thuyền",_G.ColorSea,_G.AutoSail,function(val)
+Sea:Toggle("Tự động Zone 6",_G.ColorSea,_G.AutoSail,function(val)
     _G.AutoRemover = val
     StopTween(_G.AutoSail)
     StopTween(_G.SendShip)
@@ -8129,6 +8129,10 @@ Race:Seperator("Trials")
 
 Race:Toggle("Hoàn thành ải",_G.ColorRace,false,function(race)
 	_G.AutoQuestRace = race
+end)
+
+Race:Toggle("Giết người chơi",_G.ColorRace,false, function(v)
+        AutoKill = v
 end)
 
 spawn(function()
