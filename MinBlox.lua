@@ -189,7 +189,7 @@ ImageButton1.BorderSizePixel = 0
 ImageButton1.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 ImageButton1.Size = UDim2.new(0, 70, 0, 70)
 ImageButton1.Draggable = true
-ImageButton1.Image = "http://www.roblox.com/asset/?id=1371747889713717478897"
+ImageButton1.Image = "http://www.roblox.com/asset/?id=13717478897"
 ImageButton1.MouseButton1Down:connect(function()
   game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
   game:GetService("VirtualInputManager"):SendKeyEvent(false,305,false,game)
@@ -360,7 +360,7 @@ function Update:Window(text,logo,keybind)
     Ping.Position = UDim2.new(0.28, 0,0.074, 0)
     Ping.Size = UDim2.new(0, 225, 0, 25)
     Ping.Font = Enum.Font.GothamSemibold
-    Ping.Text = "MinNe"
+    Ping.Text = "Min Gaming Hub"
     Ping.TextColor3 = Color3.fromRGB(255,255,255)
     Ping.TextSize = 14.000
     Ping.TextXAlignment = Enum.TextXAlignment.Left
@@ -413,7 +413,7 @@ function Update:Window(text,logo,keybind)
 	Logo.BackgroundTransparency = 1.000
 	Logo.Position = UDim2.new(0, -5, 0, -5)
 	Logo.Size = UDim2.new(0, 135, 0, 135)
-	Logo.Image = "rbxassetid://"
+	Logo.Image = "rbxassetid://13717478897"
     local Tab = Instance.new("Frame")
     Tab.Name = "Tab"
     Tab.Parent = Main
@@ -3853,7 +3853,7 @@ end)
     end)
     
 
-local Library = Update:Window("Min Gaming Hub","",Enum.KeyCode.RightControl);
+local Library = Update:Window("","",Enum.KeyCode.RightControl);
 local Main = Library:AddTab("Chính","")
 local M = Library:AddTab("Vật phẩm","9606626859")
 local Ss = Library:AddTab("Chỉ số","14764174048")
@@ -3862,8 +3862,8 @@ local RaceV4 = Library:AddTab("Tộc V4","11446900930")
 local P = Library:AddTab("PVP","14764193934")
 local R = Library:AddTab("Tập kích","14764250087")
 local T = Library:AddTab("Di chuyển","14764218351")
-local S = Library:AddTab("Cửa hàng","14764233722")
-local D = Library:AddTab("Trái ác quỷ","14764242920")
+local S = Library:AddTab("Cửa hàng","14764242920")
+local D = Library:AddTab("Trái ác quỷ","14764233722")
 local Misc = Library:AddTab("Khác","11447063791")
 --Main
 do
@@ -3929,8 +3929,8 @@ task.spawn(function()
 	end
 end)
 
-local AttackList = {"0", "0.1", "0.15", "0.155", "0.16", "0.165", "0.17", "0.175", "0.18", "0.185"}
-_G.FastAttackDelay = "0.175"
+local AttackList = {'Siêu thanh','Vừa','Chậm','Siêu chậm'}
+_G.FastAttackDelay = "Vừa"
 Main:AddDropdown("Tốc độ đánh", AttackList,function(MakoGay)
     _G.FastAttackDelay = MakoGay
 end)
@@ -3938,34 +3938,19 @@ spawn(function()
     while wait(.1) do
         if _G.FastAttackDelay then
             pcall(function()
-                if _G.FastAttackDelay == "0" then
-                    _G.FastAttackDelay = 0
-                elseif _G.FastAttackDelay == "0.1" then
+                if _G.FastAttackDelay == "Siêu thanh" then
                     _G.FastAttackDelay = 0.1
-                elseif _G.FastAttackDelay == "0.15" then
+                elseif _G.FastAttackDelay == "Vừa" then
                     _G.FastAttackDelay = 0.15
-                elseif _G.FastAttackDelay == "0.155" then
-                    _G.FastAttackDelay = 0.155
-                elseif _G.FastAttackDelay == "0.16" then
-                    _G.FastAttackDelay = 0.16
-                elseif _G.FastAttackDelay == "0.165" then
-                    _G.FastAttackDelay = 0.165
-                elseif _G.FastAttackDelay == "0.17" then
-                    _G.FastAttackDelay = 0.17
-                elseif _G.FastAttackDelay == "0.175" then
+                elseif _G.FastAttackDelay == "Chậm" then
                     _G.FastAttackDelay = 0.175
-                elseif _G.FastAttackDelay == "0.18" then
-                    _G.FastAttackDelay = 0.18
-                elseif _G.FastAttackDelay == "0.185" then
-                    _G.FastAttackDelay = 0.185
-                elseif _G.FastAttackDelay == "0.09" then
-                    _G.FastAttackDelay = 0.09
+                elseif _G.FastAttackDelay == "Siêu chậm" then
+                    _G.FastAttackDelay = 0.2
                 end
             end)
         end
     end
 end)
-
 local Client = game.Players.LocalPlayer
 local STOP = require(Client.PlayerScripts.CombatFramework.Particle)
 local STOPRL = require(game:GetService("ReplicatedStorage").CombatFramework.RigLib)
@@ -3992,7 +3977,6 @@ spawn(function()
         end)
     end
 end)
-
 function GetBladeHit()
 local CombatFrameworkLib = debug.getupvalues(require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework))
 local CmrFwLib = CombatFrameworkLib[2]
@@ -4048,7 +4032,7 @@ while wait(.1) do
 end
 end)
 
-       Main:AddToggle("Di chuyển nhanh",BypassTP,function(value)
+       Main:AddToggle("Di chuyển nhanh (Reset)",BypassTP,function(value)
         BypassTP = value
     end)
     
@@ -4084,7 +4068,7 @@ spawn(function()
   end
 end)
 
-Main:AddToggle("Tấn công nhanh ",true,function(value)
+Main:AddToggle("Tấn công nhanh",true,function(value)
         _G.FastAttack = value
     end)      
 
@@ -4650,7 +4634,7 @@ Main:AddToggle("Gom quái",true,function(Mag)
     end)
     
 local Bring = {"Low", "Normal", "Super Bring"}
-_G.BringMode = "Normal"
+_G.BringMode = 300
 Main:AddDropdown("Độ gom quái", Bring,function(value)
     _G.BringMode = value
 end)
@@ -4727,7 +4711,7 @@ spawn(function()
 while wait(.1) do
     if _G.HyperSonic then
         pcall(function()
-            repeat task.wait(0,09)
+            repeat task.wait(0.1)
                 AttackHit()
             until not _G.HyperSonic
         end)
